@@ -22,31 +22,32 @@ version: 1.0.0+1
 environment:
   sdk: '>=2.18.5 <3.0.0'
 
-# Dependencies specify other packages that your package needs in order to work.
-# To automatically upgrade your package dependencies to the latest versions
-# consider running `flutter pub upgrade --major-versions`. Alternatively,
-# dependencies can be manually updated by changing the version numbers below to
-# the latest version available on pub.dev. To see which dependencies have newer
-# versions available, run `flutter pub outdated`.
 dependencies:
-  flutter:
-    sdk: flutter
-
-
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
+  auto_route: ^5.0.0 # paquete de navegación para simplificar su configuracion con codigo autogenerado https://pub.dev/packages/auto_route
+  bloc: ^8.0.3 # libreria de manejo de estado  (paquete base) https://pub.dev/packages/bloc
+  flutter_bloc: ^8.1.1 # libreria de manejo de estado https://pub.dev/packages/flutter_bloc
   cupertino_icons: ^1.0.2
+  dartz: ^0.10.1 #libreria para programción funcional, para usar el objeto Either<R,L> y poder devolver dos objetos en las asincronas https://pub.dev/packages/dartz
+  dio: ^4.0.6 #libreria http https://pub.dev/packages/dio
+  equatable: ^2.0.5 # libreria que sobrescribe el operador == para poder comparar de forma facil dos objetos
+  flutter:
+    sdk: flutter   
+  freezed: ^2.1.0+1 # paquete que genera codigo en los objetos y las omite para no tener clases largisimas https://pub.dev/packages/freezed
+  freezed_annotation: ^2.1.0 # https://pub.dev/packages/freezed_annotation
+  get_it: ^7.2.0 #Injeccion de dependencias https://pub.dev/packages/get_it
+  json_annotation: ^4.6.0 # Serializar y deserializar json https://pub.dev/packages/json_annotation
+  shared_preferences: ^2.0.15 # https://pub.dev/packages/shared_preferences
 
 dev_dependencies:
+  auto_route_generator: ^5.0.0
+  #build_runner: ^2.2.0 me pide que active el ejecutar codigod e terceros en windows
+  flutter_lints: ^2.0.0
+  integration_test:
+    sdk: flutter
   flutter_test:
     sdk: flutter
-
-  # The "flutter_lints" package below contains a set of recommended lints to
-  # encourage good coding practices. The lint set provided by the package is
-  # activated in the `analysis_options.yaml` file located at the root of your
-  # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
-  flutter_lints: ^2.0.0
+  json_serializable: ^6.3.1
+  mocktail: ^0.3.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
